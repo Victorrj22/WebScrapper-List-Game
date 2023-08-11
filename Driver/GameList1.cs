@@ -8,7 +8,7 @@ using EasyAutomationFramework;
 
 namespace WebScrap.Driver
 {
-    public class WebScrapper
+    public class GameList1
     {
         public DataTable GetData(string link)
         {
@@ -21,7 +21,7 @@ namespace WebScrap.Driver
             {
                 
                 driver.Navigate().GoToUrl(link);
-                //*[@id="splide01-list"]
+                //*[@id="splide01-list"]        //*[@id="internal-content"]/div[2]/div/ul
                 var consultaXPath = driver.FindElement(By.XPath("//*[@id=\"internal-content\"]/div[2]/div/ul")); // Acessa o container
                 var consultaClass = consultaXPath.FindElements(By.ClassName("item-game")); // Acessa a classe
 
@@ -39,3 +39,12 @@ namespace WebScrap.Driver
         }
     }
 }
+
+////*[@id="main_content"]/div[1]/div[2]/div/div[1]/div/div[2] (XPath)
+/// Class "clamp-list"
+///
+/// metascore_w large game mixed (score)
+/// title (nome)
+/// clamp-details (data)
+///
+/// link https://www.metacritic.com/browse/games/release-date/new-releases/pc/date

@@ -13,5 +13,7 @@ namespace WebScrap.Model
         public string Date { get; set; }
 
         public string Score { get; set; }
+
+        public string Id { get; set; }
     }
 }
